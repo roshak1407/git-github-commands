@@ -1,0 +1,173 @@
+GIT
+version control system is a tools that helps to track changes in code.
+git is a version control system.it is popular, free&open source ,fast and scalable
+
+primarily git is used for 2 reasons:
+1.to track the history of the code
+2.to collaborate(to work with a team)
+
+
+GITHUB
+Website that allows developers to store and manage their code using GIT
+https://github.com
+
+normal term  ->   github term
+folder       ->   repository
+changes      ->   commit
+
+
+SETTING UP GIT
+first download the visual studio code.
+if we are windows user then we have to download the gitbash
+if we are mac user then we have to download the terminal
+
+git --version to check the setup of git
+
+
+CONFIGURING GIT
+gitconfig --global user.name"myname"(name with which we made github account)
+
+gitconfig --globaluser.email"someone@email.com"(email witj which we made github account)
+
+gitconfig --list(give details of github account)
+
+
+CLONE & STATUS
+remote[github]      local[laptop/pc]
+Clone:cloning a repository on our local machine
+ git clone<-somelink->
+
+status-displays the state of the code
+git status
+
+there are four types of git status
+untracked:new files that git doesn't track
+
+modified:changed
+
+staged:file is ready to be committed
+
+unmodified:unchanged
+
+
+cd-change directory(folder)
+ls->list all the files
+ls -a->list all the files including hidden files
+
+cd ..//to come out of a particular directory
+mkdir<foldername>//create a folder with the name entered
+
+
+ADD & COMMIT
+ADD: adds new or changed files in your working directory ti the git staging area.
+git add<-filename->
+git add .//it will add all the files.
+
+commit:it is the record of the change
+git commit-m"some message"  
+
+
+now to show these changes on our github a command is there that is called push command.
+push:upload local[laptop/pc] repository content to remote[github] repository.
+
+git push origin main
+         reponame  branchname
+
+to make a folder as git repo we have to use <repo name>||git init in particular folder
+INIT COMMAND
+init-used to create a new git repository
+
+git init
+
+git remote add origin<-link->//by this command we add a new repo
+
+git remote-v(to verify remote)
+
+git branch//to check branch
+
+git branch-M main (to rename the branch)
+
+git push origin main||git push-u origin main(with -u we set upstream)
+
+
+WORKFLOW OF GIT
+
+githubrepo:firstly we make files/repo on github
+clone:then we clone that repository
+changes:doing changes in the repository
+add:we add the changes
+commit:we commit the changes after adding
+push:then we push the changes on the github
+
+
+
+BRANCH COMMANDS
+git branch (to check branch)
+
+git branch-M main(to rename branch)
+
+git checkout<-branch name-> (to navigate)
+
+git checkout-b<-new branch name>(to create new branch)
+
+git branch-d<-branch name-> (to delete branch)
+
+
+
+MERGING CODE
+
+WAY1
+git diff<-branch name->   (to compare commits,branches,files&more)
+git merge<-branch name->  (to merge 2 branches)
+
+WAY2
+create a PR(pull request)//it lets you tell others about changes you have pushed to a barnch in a repository on github.
+
+
+
+PULL COMMAND
+git pull origin main
+//used to fetch and download content from a remote repository and immediately update the local repository to match the content.
+
+
+
+RESOLVE MERGE CONFLICTS
+an event that takes place when git is unable to automatically resolve differences in code between two commits.
+  
+git log//check all the commits
+
+UNDOING CHANGES
+CASE1: STAGED CHANGES
+
+     git reset<-filename->
+     git reset
+
+CASE2:committed changes(for one commit)
+    
+     git resetHEAD~1
+
+CASE3:committed changes(for many commits) //hash is a code that is unique for any  particular commit.
+     
+     git reset<-commit hash->
+     git reset--hard<-commit hash->commit removed from git as well as fro vs code
+
+ 
+
+FORK
+A fork is a new repository that shares code and visibility settings with the original "upstream" repository.
+fork is a rough copy.
+
+ 
+
+
+
+
+
+ 
+ 
+
+
+ 
+
+
+
